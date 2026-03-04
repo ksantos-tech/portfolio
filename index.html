@@ -19,6 +19,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#threatscan">ThreatScan</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -427,7 +428,145 @@
                 </div>
             </div>
 
-     
+            <!-- Security Investigator Role -->
+            <div class="project-category">
+                <h3><i class="fas fa-user-secret"></i> Security Investigator</h3>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <h4>Threat Analysis</h4>
+                        <p>Conducted systematic analysis of suspicious indicators, determining threat actor TTPs and potential impact to organizational assets.</p>
+                        <div class="project-tags"><span>IOC Analysis</span><span>Threat Intel</span><span>Risk Assessment</span></div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Malware Triage</h4>
+                        <p>Performed initial malware classification and triage to determine severity, persistence mechanisms, and recommended containment actions.</p>
+                        <div class="project-tags"><span>Malware</span><span>Static Analysis</span><span>Sandbox</span></div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Threat Hunting</h4>
+                        <p>Proactively searched for Indicators of Compromise (IOCs) and anomalous patterns across endpoints, network logs, and cloud telemetry.</p>
+                        <div class="project-tags"><span>Proactive Hunting</span><span>SIEM</span><span>EDR</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ThreatScan Investigator Section -->
+    <section id="threatscan" class="section section-highlight">
+        <div class="container">
+            <h2 class="section-title">ThreatScan Investigator</h2>
+            <p class="section-subtitle">Client-side threat intelligence tool combining VirusTotal & AbuseIPDB APIs</p>
+            
+            <div class="threatscan-preview">
+                <div class="preview-header">
+                    <div class="preview-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="preview-title">ThreatScan Investigator</span>
+                </div>
+                <div class="preview-content">
+                    <div class="preview-mockup">
+                        <!-- IOC Input Demo -->
+                        <div class="mockup-section">
+                            <div class="mockup-label">Enter IOC</div>
+                            <div class="mockup-input">https://suspicious-domain.com</div>
+                        </div>
+                        
+                        <!-- Results Preview -->
+                        <div class="mockup-results">
+                            <div class="mockup-result-card">
+                                <div class="mockup-result-header">
+                                    <span class="mockup-ioc">https://suspicious-domain.com</span>
+                                    <span class="mockup-badge high">HIGH RISK</span>
+                                </div>
+                                <div class="mockup-stats">
+                                    <div class="mockup-stat">
+                                        <span class="stat-num">45/70</span>
+                                        <span class="stat-text">VT Detections</span>
+                                    </div>
+                                    <div class="mockup-stat">
+                                        <span class="stat-num">92%</span>
+                                        <span class="stat-text">Abuse Score</span>
+                                    </div>
+                                    <div class="mockup-stat">
+                                        <span class="stat-num">1.2K</span>
+                                        <span class="stat-text">Total Reports</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature Pills -->
+                        <div class="mockup-features">
+                            <span class="feature-pill"><i class="fas fa-bolt"></i> Auto-detect IOC type</span>
+                            <span class="feature-pill"><i class="fas fa-list"></i> Bulk scanning</span>
+                            <span class="feature-pill"><i class="fas fa-download"></i> CSV/TXT export</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="threatscan-features">
+                <div class="threatscan-feature">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Dual API Integration</h3>
+                    <p>VirusTotal (70+ vendors) + AbuseIPDB for comprehensive threat intelligence</p>
+                </div>
+                <div class="threatscan-feature">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Smart Detection</h3>
+                    <p>Auto-detects URL, IP, Domain, or Hash input types automatically</p>
+                </div>
+                <div class="threatscan-feature">
+                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Combined Analysis</h3>
+                    <p>Unified risk assessment with cross-referenced threat data</p>
+                </div>
+                <div class="threatscan-feature">
+                    <div class="feature-icon"><i class="fas fa-bulk"></i></div>
+                    <h3>Bulk Processing</h3>
+                    <p>Scan multiple IOCs with real-time progress tracking</p>
+                </div>
+            </div>
+            
+            <!-- Supported IOC Types -->
+            <div class="ioc-types">
+                <h3><i class="fas fa-crosshairs"></i> Supported IOC Types</h3>
+                <div class="ioc-cards">
+                    <div class="ioc-card">
+                        <i class="fas fa-link"></i>
+                        <span>URL</span>
+                        <small>https://example.com/malware</small>
+                    </div>
+                    <div class="ioc-card">
+                        <i class="fas fa-network-wired"></i>
+                        <span>IP Address</span>
+                        <small>192.168.1.1</small>
+                    </div>
+                    <div class="ioc-card">
+                        <i class="fas fa-globe"></i>
+                        <span>Domain</span>
+                        <small>evil-domain.com</small>
+                    </div>
+                    <div class="ioc-card">
+                        <i class="fas fa-file-code"></i>
+                        <span>File Hash</span>
+                        <small>MD5, SHA1, SHA256</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="threatscan-cta">
+                <a href="https://ksantos-tech.github.io/OSINTS/" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fas fa-external-link-alt"></i> Launch ThreatScan Investigator
+                </a>
+                <p>Open-source tool • No server required • Runs in browser</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section section-dark">
@@ -450,7 +589,7 @@
                     </a>
                     <a href="tel:+639474781542" class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>#</span>
+                        <span>+63 947 478 1542</span>
                     </a>
                 </div>
             </div>
@@ -468,4 +607,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
