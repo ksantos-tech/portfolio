@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Santos | L3 Cybersecurity Consultant</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-size='20' fill='%2300d4aa' font-family='Arial'>KS</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,12 +15,11 @@
             <a href="#home" class="logo">KS</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Security Projects</a></li>
+                <li><a href="#threatanalyzer">Research</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#threatscan">ThreatAnalyzer</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -32,46 +32,162 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Kim Santos</h1>
-            <h2>L3 Cybersecurity Consultant</h2>
-            <p>Securing Digital Frontiers | 6+ Years of Cybersecurity Excellence</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#experience" class="btn btn-secondary">View Experience</a>
+        <div class="hero-bg-effects">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-container">
+            <!-- Left Side - Text Content -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Projects</span>
+                </div>
+                <h1 class="hero-name">Kim Santos</h1>
+                <h2 class="hero-title">Cybersecurity Engineer | Incident Response | Security Operations</h2>
+                <p class="hero-tagline">Building and defending enterprise security capabilities.</p>
+                <p class="hero-description">L3 Cybersecurity Consultant with 7+ years of experience across security engineering, incident response, SOC operations, network security, penetration testing, and security governance. Experienced in building detection capabilities, improving enterprise defenses, and responding to modern threats.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-shield-alt"></i>
+                        View Security Portfolio
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/ksantos-tech" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ksantos-tech" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:kimrench23@gmail.com"><i class="fas fa-envelope"></i></a>
+            
+            <!-- Right Side - Profile Card -->
+            <div class="hero-card">
+                <div class="card-inner">
+                    <div class="card-image-wrapper">
+                        <img src="./amused-hero.jpg" alt="Kim Santos - Cybersecurity Consultant" class="card-image">
+                        <div class="card-image-overlay"></div>
+                    </div>
+                    
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">7+</span>
+                            <span class="stat-label">Years<br>Cybersecurity Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-value">40%</span>
+                            <span class="stat-label">Reduction<br>SIEM False Positives</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-value">Global</span>
+                            <span class="stat-label">Security<br>Clients</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-skills">
+                        <span class="skill-tag"><i class="fas fa-cogs"></i>Security Engineering</span>
+                        <span class="skill-tag"><i class="fas fa-bug"></i>Penetration Testing</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i>Automation</span>
+                        <span class="skill-tag"><i class="fas fa-exclamation-triangle"></i>Incident Response</span>
+                        <span class="skill-tag"><i class="fas fa-eye"></i>Threat Intelligence</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i>Network Security</span>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <p class="footer-title">Defending Enterprise Security</p>
+                        <div class="card-social">
+                            <a href="https://linkedin.com/in/ksantos-tech" target="_blank" class="card-social-btn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/ksantos-tech" target="_blank" class="card-social-btn" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:kimrench23@gmail.com" class="card-social-btn" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-bg"></div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- Security Expertise Section -->
+    <section id="expertise" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Level 3 Engineer and Cybersecurity Consultant with 6+ years of experience across MSP and enterprise environments, combining hands-on IT operations and security engineering.</p>
-                    <p>Proven Tier 3 / final escalation point for complex Microsoft 365, Azure, infrastructure, networking, and security issues. Strong expertise in Microsoft Entra ID, Intune, Conditional Access, Windows Server, firewalls, and automation, with a track record of leading migrations, security initiatives, and advising clients on secure, scalable solutions.</p>
-                    <p>Currently serving as L3 Cybersecurity Consultant at NEVERHACK, providing security advisory services and leading incident response for high-severity security incidents.</p>
+            <h2 class="section-title">Security Expertise</h2>
+            <p class="section-subtitle">Core cybersecurity domains and technical specializations</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-radar"></i></div>
+                    <h3>Detection Engineering</h3>
+                    <p>Designing SIEM detection rules, Sigma rules, and threat detection logic aligned with MITRE ATT&CK framework.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">6+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Certifications</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Tier 3</span>
-                        <span class="stat-label">Security Engineer</span>
-                    </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-search"></i></div>
+                    <h3>Threat Investigation</h3>
+                    <p>Incident response, malware triage, forensic analysis, and IOC investigations across enterprise environments.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>Security Architecture</h3>
+                    <p>Security control mapping, NIST CSF alignment, and security maturity improvements for organizations.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Security Automation</h3>
+                    <p>SOC tooling, Python automation, API integrations, and SOAR playbooks for operational efficiency.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-bug"></i></div>
+                    <h3>Red Team / Offensive Security</h3>
+                    <p>OWASP Top 10 testing, vulnerability exploitation, and adversary simulation using Caldera and Metasploit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Impact Section -->
+    <section id="impact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Security Impact</h2>
+            <p class="section-subtitle">Measurable results and business value delivered</p>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon"><i class="fas fa-bell-slash"></i></div>
+                    <div class="impact-number">40%</div>
+                    <h3>Reduced SIEM False Positives</h3>
+                    <p>Tuned Exabeam correlation rules while maintaining detection efficacy</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="impact-number">10+</div>
+                    <h3>Analyst Hours Saved Weekly</h3>
+                    <p>Python automation scripts for IOC translation and bulk IP checking</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon"><i class="fas fa-shield-virus"></i></div>
+                    <div class="impact-number">20+</div>
+                    <h3>Detection Rules Built</h3>
+                    <p>Custom KQL and Sigma rules mapped to MITRE ATT&CK techniques</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="impact-number">60%</div>
+                    <h3>MTTR Reduction</h3>
+                    <p>SOAR playbook automation reducing manual response effort</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="impact-number">85%</div>
+                    <h3>Detection Rate</h3>
+                    <p>Purple team adversary simulation detection success rate</p>
                 </div>
             </div>
         </div>
@@ -166,105 +282,62 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Security Stack Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <!-- Blue Team -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Blue Team</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">SIEM</span>
-                        <span class="skill-tag">Exabeam</span>
-                        <span class="skill-tag">Microsoft Sentinel</span>
-                        <span class="skill-tag">Stellar Cyber</span>
-                        <span class="skill-tag">McAfee SIEM</span>
-                        <span class="skill-tag">Kibana</span>
-                        <span class="skill-tag">EDR/AV</span>
-                        <span class="skill-tag">Microsoft Defender</span>
-                        <span class="skill-tag">CrowdStrike</span>
-                        <span class="skill-tag">Firewall</span>
-                        <span class="skill-tag">Checkpoint</span>
-                        <span class="skill-tag">Palo Alto</span>
-                        <span class="skill-tag">Vulnerability Assessment</span>
-                        <span class="skill-tag">Qualys</span>
-                        <span class="skill-tag">Rapid7</span>
-                        <span class="skill-tag">Tenable</span>
-                        <span class="skill-tag">Email Security</span>
-                        <span class="skill-tag">Proofpoint</span>
-                        <span class="skill-tag">Mimecast</span>
-                        <span class="skill-tag">SOAR</span>
-                        <span class="skill-tag">Threat Intelligence</span>
-                        <span class="skill-tag">VPN</span>
-                        <span class="skill-tag">IPS</span>
-                        <span class="skill-tag">QoS</span>
+            <h2 class="section-title">Security Stack</h2>
+            <p class="section-subtitle">Technologies and platforms I work with</p>
+            
+            <div class="security-stack-grid">
+                <div class="stack-category">
+                    <h3><i class="fas fa-wave-square"></i> SIEM</h3>
+                    <div class="stack-items">
+                        <span>Microsoft Sentinel</span>
+                        <span>Exabeam</span>
+                        <span>Stellar Cyber</span>
+                        <span>McAfee SIEM</span>
+                        <span>Kibana</span>
                     </div>
                 </div>
-
-                <!-- Red Team -->
-                <div class="skill-category">
+                <div class="stack-category">
+                    <h3><i class="fas fa-desktop"></i> EDR</h3>
+                    <div class="stack-items">
+                        <span>Microsoft Defender</span>
+                        <span>CrowdStrike</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h3><i class="fas fa-eye"></i> Threat Intelligence</h3>
+                    <div class="stack-items">
+                        <span>VirusTotal</span>
+                        <span>AbuseIPDB</span>
+                        <span>OSINT</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud Security</h3>
+                    <div class="stack-items">
+                        <span>Azure</span>
+                        <span>Microsoft Entra ID</span>
+                        <span>Conditional Access</span>
+                        <span>SASE</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h3><i class="fas fa-code"></i> Automation</h3>
+                    <div class="stack-items">
+                        <span>Python</span>
+                        <span>SOAR</span>
+                        <span>API Integrations</span>
+                    </div>
+                </div>
+                <div class="stack-category">
                     <h3><i class="fas fa-bug"></i> Red Team</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Metasploit</span>
-                        <span class="skill-tag">Qualys</span>
-                        <span class="skill-tag">Sonarcloud</span>
-                        <span class="skill-tag">BurpSuite</span>
-                        <span class="skill-tag">Kali Linux</span>
-                        <span class="skill-tag">Nmap</span>
-                        <span class="skill-tag">Wireshark</span>
-                    </div>
-                </div>
-
-                <!-- Programming -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming & Scripts</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">PowerShell</span>
-                    </div>
-                </div>
-
-                <!-- Cloud & Identity -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & Identity</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Entra ID</span>
-                        <span class="skill-tag">Azure</span>
-                        <span class="skill-tag">CloudFlare</span>
-                        <span class="skill-tag">Microsoft 365</span>
-                        <span class="skill-tag">SASE</span>
-                        <span class="skill-tag">CATO</span>
-                        <span class="skill-tag">Netskope</span>
-                        <span class="skill-tag">CASB</span>
-                        <span class="skill-tag">ZTNA</span>
-                        <span class="skill-tag">SD-WAN</span>
-                    </div>
-                </div>
-
-                <!-- Data Security -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Data Security</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft DLP</span>
-                        <span class="skill-tag">Microsoft Purview</span>
-                        <span class="skill-tag">Identity & Access Management</span>
-                        <span class="skill-tag">Conditional Access</span>
-                        <span class="skill-tag">MFA</span>
-                        <span class="skill-tag">RBAC</span>
-                    </div>
-                </div>
-
-                <!-- Endpoint Management -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-desktop"></i> Endpoint Management</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Intune</span>
-                        <span class="skill-tag">JAMF</span>
-                        <span class="skill-tag">RMM</span>
-                        <span class="skill-tag">Action1</span>
-                        <span class="skill-tag">Windows Server</span>
+                    <div class="stack-items">
+                        <span>Metasploit</span>
+                        <span>BurpSuite</span>
+                        <span>Kali Linux</span>
+                        <span>Nmap</span>
                     </div>
                 </div>
             </div>
@@ -290,6 +363,11 @@
                     <div class="cert-icon"><i class="fas fa-user-shield"></i></div>
                     <h3>Proofpoint Identity Threat Specialist</h3>
                     <p>Specialization in identity threat detection and response</p>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Stellar Cyber SOC Analyst Associate</h3>
+                    <p>Certification validating skills in Security Operations, threat detection, and investigation using the Stellar Cyber Open XDR platform.</p>
                 </div>
             </div>
         </div>
@@ -330,150 +408,168 @@
             <h2 class="section-title">Security Projects</h2>
             <p class="section-subtitle">Technical deliverables demonstrating expertise in detection engineering, incident response, purple team operations, and security architecture</p>
             
-            <!-- Detection Engineering Projects -->
-            <div class="project-category">
-                <h3><i class="fas fa-radar"></i> Detection Engineering Projects</h3>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h4>Custom KQL Rules</h4>
-                        <p>Developed Microsoft Sentinel KQL queries for detection of anomalous PowerShell execution, suspicious Azure AD sign-ins, and credential abuse patterns.</p>
-                        <div class="project-tags"><span>KQL</span><span>Sentinel</span><span>Azure AD</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Sigma Rules</h4>
-                        <p>Authored and converted detection rules to Sigma format for SIEM-agnostic threat detection, covering ransomware behaviors and lateral movement.</p>
-                        <div class="project-tags"><span>Sigma</span><span>SIEM</span><span>Threat Detection</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>False Positive Reduction Tuning</h4>
-                        <p>Analyzed alert fatigue patterns and tuned Exabeam correlation rules, reducing false positives by 40% while maintaining detection efficacy.</p>
-                        <div class="project-tags"><span>Exabeam</span><span>Tuning</span><span>Alert Optimization</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Coverage Gap Analysis</h4>
-                        <p>Conducted MITRE ATT&CK coverage assessment across SIEM, EDR, and network sensors, identifying detection gaps in initial access and execution phases.</p>
-                        <div class="project-tags"><span>MITRE ATT&CK</span><span>Gap Analysis</span><span>Coverage Mapping</span></div>
-                    </div>
-                </div>
+            <!-- Filter Tabs -->
+            <div class="project-filter">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="security-architecture">Security Architecture</button>
+                <button class="filter-tab" data-filter="detection-engineering">Detection Engineering</button>
+                <button class="filter-tab" data-filter="threat-investigation">Threat Investigation</button>
+                <button class="filter-tab" data-filter="security-automation">Security Automation</button>
+                <button class="filter-tab" data-filter="red-team">Red Team / Pentesting</button>
             </div>
-
-            <!-- Incident Reconstruction -->
-            <div class="project-category">
-                <h3><i class="fas fa-search"></i> Incident Reconstruction Write-ups</h3>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h4>Timeline Analysis</h4>
-                        <p>Reconstructed attack chains from initial access through lateral movement using Windows Event Logs, network captures, and memory forensics.</p>
-                        <div class="project-tags"><span>Timeline</span><span>Forensics</span><span>Event Logs</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>ATT&CK Mapping</h4>
-                        <p>Mapped incident IOCs and TTPs to MITRE ATT&CK framework, enabling threat intelligence correlation and recurrence pattern identification.</p>
-                        <div class="project-tags"><span>ATT&CK</span><span>TTPs</span><span>Threat Intel</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>IOC Extraction</h4>
-                        <p>Extracted and documented IOCs including malicious IPs, domains, file hashes, and registry keys for threat intelligence sharing and blocking rules.</p>
-                        <div class="project-tags"><span>IOCs</span><span>Malware Analysis</span><span>Threat Feeds</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Executive Summary Version</h4>
-                        <p>Translated technical incident findings into executive-ready summaries with business impact assessment, risk ratings, and remediation recommendations.</p>
-                        <div class="project-tags"><span>Executive Reporting</span><span>Risk Assessment</span><span>Stakeholder Comm</span></div>
-                    </div>
+            
+            <!-- Project Cards Grid -->
+            <div class="project-cards-grid">
+                <!-- Security Architecture Projects -->
+                <div class="project-card" data-category="security-architecture">
+                    <h4>Control Mapping to NIST CSF</h4>
+                    <p>Mapped existing security controls to NIST Cybersecurity Framework (Identify, Protect, Detect, Respond, Recover) for comprehensive coverage assessment.</p>
+                    <div class="project-metrics"><span class="metric">5 Domains</span><span class="metric">100% Coverage</span></div>
+                    <div class="project-tags"><span>NIST CSF</span><span>Control Mapping</span><span>Framework</span></div>
                 </div>
-            </div>
-
-            <!-- Purple Team Reports -->
-            <div class="project-category">
-                <h3><i class="fas fa-users"></i> Purple Team Reports</h3>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h4>Simulated Attacks</h4>
-                        <p>Executed adversary simulation scenarios using Caldera and Metasploit to test detection capabilities against real-world attack techniques.</p>
-                        <div class="project-tags"><span>Adversary Simulation</span><span>Caldera</span><span>Metasploit</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Detection Success/Failure Analysis</h4>
-                        <p>Documented detection rates by technique, analyzed gaps in logging coverage, and provided recommendations for improved visibility.</p>
-                        <div class="project-tags"><span>Detection Rate</span><span>Visibility</span><span>Logging</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Control Improvement Plan</h4>
-                        <p>Developed prioritized remediation roadmap based on purple team findings, aligning security controls with MITRE ATT&CK coverage goals.</p>
-                        <div class="project-tags"><span>Remediation</span><span>Control Enhancement</span><span>Roadmap</span></div>
-                    </div>
+                <div class="project-card" data-category="security-architecture">
+                    <h4>Gap Analysis</h4>
+                    <p>Identified security control gaps across identity, endpoint, network, and cloud security domains with risk-rated findings and business context.</p>
+                    <div class="project-metrics"><span class="metric">12 Gaps Found</span><span class="metric">Critical</span></div>
+                    <div class="project-tags"><span>Gap Analysis</span><span>Risk Assessment</span><span>Security Controls</span></div>
                 </div>
-            </div>
-
-            <!-- Security Architecture Review -->
-            <div class="project-category">
-                <h3><i class="fas fa-sitemap"></i> Security Architecture Review Samples</h3>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h4>Control Mapping to NIST CSF</h4>
-                        <p>Mapped existing security controls to NIST Cybersecurity Framework (Identify, Protect, Detect, Respond, Recover) for comprehensive coverage assessment.</p>
-                        <div class="project-tags"><span>NIST CSF</span><span>Control Mapping</span><span>Framework</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Gap Analysis</h4>
-                        <p>Identified security control gaps across identity, endpoint, network, and cloud security domains with risk-rated findings and business context.</p>
-                        <div class="project-tags"><span>Gap Analysis</span><span>Risk Assessment</span><span>Security Controls</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Improvement Roadmap</h4>
-                        <p>Created phased implementation roadmap prioritizing high-risk gaps, considering budget constraints and operational readiness.</p>
-                        <div class="project-tags"><span>Roadmap</span><span>Implementation Plan</span><span>Prioritization</span></div>
-                    </div>
+                <div class="project-card" data-category="security-architecture">
+                    <h4>Security Improvement Roadmap</h4>
+                    <p>Created phased implementation roadmap prioritizing high-risk gaps, considering budget constraints and operational readiness.</p>
+                    <div class="project-metrics"><span class="metric">3 Phases</span><span class="metric">12 Months</span></div>
+                    <div class="project-tags"><span>Roadmap</span><span>Implementation Plan</span><span>Prioritization</span></div>
                 </div>
-            </div>
 
-            <!-- Security Investigator Role -->
-            <div class="project-category">
-                <h3><i class="fas fa-user-secret"></i> Security Investigator</h3>
-                <div class="project-cards">
-                    <div class="project-card">
-                        <h4>Threat Analysis</h4>
-                        <p>Conducted systematic analysis of suspicious indicators, determining threat actor TTPs and potential impact to organizational assets.</p>
-                        <div class="project-tags"><span>IOC Analysis</span><span>Threat Intel</span><span>Risk Assessment</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Malware Triage</h4>
-                        <p>Performed initial malware classification and triage to determine severity, persistence mechanisms, and recommended containment actions.</p>
-                        <div class="project-tags"><span>Malware</span><span>Static Analysis</span><span>Sandbox</span></div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Threat Hunting</h4>
-                        <p>Proactively searched for Indicators of Compromise (IOCs) and anomalous patterns across endpoints, network logs, and cloud telemetry.</p>
-                        <div class="project-tags"><span>Proactive Hunting</span><span>SIEM</span><span>EDR</span></div>
-                    </div>
+                <!-- Detection Engineering Projects -->
+                <div class="project-card" data-category="detection-engineering">
+                    <h4>SIEM Detection Rules</h4>
+                    <p>Developed Microsoft Sentinel KQL queries for detection of anomalous PowerShell execution, suspicious Azure AD sign-ins, and credential abuse patterns.</p>
+                    <div class="project-metrics"><span class="metric">15+ Rules</span><span class="metric">85% Accuracy</span></div>
+                    <div class="project-tags"><span>KQL</span><span>SIEM</span><span>Microsoft Sentinel</span></div>
+                </div>
+                <div class="project-card" data-category="detection-engineering">
+                    <h4>Custom Threat Detection Logic</h4>
+                    <p>Authored and converted detection rules to Sigma format for SIEM-agnostic threat detection, covering ransomware behaviors and lateral movement.</p>
+                    <div class="project-metrics"><span class="metric">20+ Rules</span><span class="metric">MITRE ATT&CK</span></div>
+                    <div class="project-tags"><span>Sigma</span><span>SIEM</span><span>Threat Detection</span><span>MITRE ATT&CK</span></div>
+                </div>
+                <div class="project-card" data-category="detection-engineering">
+                    <h4>ThreatAnalyzer (Threat Intelligence Tool)</h4>
+                    <p>Cybersecurity investigation and threat intelligence platform I designed and built to analyze Indicators of Compromise (IOCs). The tool aggregates threat data from multiple intelligence sources—VirusTotal, AbuseIPDB, URLScan, and WHOIS—to help analysts quickly determine if an IOC represents malicious activity.</p>
+                    <div class="project-metrics"><span class="metric">3 APIs</span><span class="metric">Real-time</span></div>
+                    <div class="project-tags"><span>Python</span><span>Threat Intel</span><span>API Integration</span><span>VirusTotal</span><span>WHOIS</span></div>
+                </div>
+                <div class="project-card" data-category="detection-engineering">
+                    <h4>False Positive Reduction Tuning</h4>
+                    <p>Analyzed alert fatigue patterns and tuned Exabeam correlation rules, reducing false positives by 40% while maintaining detection efficacy.</p>
+                    <div class="project-metrics"><span class="metric">40% Reduction</span><span class="metric">Maintained Coverage</span></div>
+                    <div class="project-tags"><span>Exabeam</span><span>Tuning</span><span>Alert Optimization</span></div>
+                </div>
+                <div class="project-card" data-category="detection-engineering">
+                    <h4>Coverage Gap Analysis</h4>
+                    <p>Conducted MITRE ATT&CK coverage assessment across SIEM, EDR, and network sensors, identifying detection gaps in initial access and execution phases.</p>
+                    <div class="project-metrics"><span class="metric">14 Techniques</span><span class="metric">Gap Identified</span></div>
+                    <div class="project-tags"><span>MITRE ATT&CK</span><span>Gap Analysis</span><span>Coverage Mapping</span></div>
+                </div>
+
+                <!-- Threat Investigation Projects -->
+                <div class="project-card" data-category="threat-investigation">
+                    <h4>Threat Analysis</h4>
+                    <p>Conducted systematic analysis of suspicious indicators, determining threat actor TTPs and potential impact to organizational assets.</p>
+                    <div class="project-metrics"><span class="metric">50+ IOCs</span><span class="metric">TTPs Mapped</span></div>
+                    <div class="project-tags"><span>IOC Analysis</span><span>Threat Intel</span><span>Risk Assessment</span></div>
+                </div>
+                <div class="project-card" data-category="threat-investigation">
+                    <h4>Malware Triage</h4>
+                    <p>Performed initial malware classification and triage to determine severity, persistence mechanisms, and recommended containment actions.</p>
+                    <div class="project-metrics"><span class="metric">100+ Samples</span><span class="metric">Classified</span></div>
+                    <div class="project-tags"><span>Malware</span><span>Static Analysis</span><span>Sandbox</span></div>
+                </div>
+                <div class="project-card" data-category="threat-investigation">
+                    <h4>Threat Hunting</h4>
+                    <p>Proactively searched for Indicators of Compromise (IOCs) and anomalous patterns across endpoints, network logs, and cloud telemetry.</p>
+                    <div class="project-metrics"><span class="metric">5 Campaigns</span><span class="metric">Threats Found</span></div>
+                    <div class="project-tags"><span>Proactive Hunting</span><span>SIEM</span><span>EDR</span></div>
+                </div>
+                <div class="project-card" data-category="threat-investigation">
+                    <h4>Timeline Analysis</h4>
+                    <p>Reconstructed attack chains from initial access through lateral movement using Windows Event Logs, network captures, and memory forensics.</p>
+                    <div class="project-metrics"><span class="metric">Full Reconstruction</span><span class="metric">Chain Analysis</span></div>
+                    <div class="project-tags"><span>Timeline</span><span>Forensics</span><span>Event Logs</span></div>
+                </div>
+
+                <!-- Security Automation Projects -->
+                <div class="project-card" data-category="security-automation">
+                    <h4>Python Security Automation Scripts</h4>
+                    <p>Developed custom SOC tools in Python (Bulk IP Checker, IOC Translator), saving approximately 10+ analyst hours per week through automation.</p>
+                    <div class="project-metrics"><span class="metric">10+ Hours Saved</span><span class="metric">Weekly</span></div>
+                    <div class="project-tags"><span>Python</span><span>Automation</span><span>SIEM</span></div>
+                </div>
+                <div class="project-card" data-category="security-automation">
+                    <h4>Security Workflow Automation</h4>
+                    <p>Designed and automated SOAR playbooks, reducing manual response effort and Mean Time to Respond (MTTR).</p>
+                    <div class="project-metrics"><span class="metric">MTTR Reduced</span><span class="metric">60%</span></div>
+                    <div class="project-tags"><span>SOAR</span><span>Playbook</span><span>Automation</span></div>
+                </div>
+                <div class="project-card" data-category="security-automation">
+                    <h4>Detection Automation</h4>
+                    <p>Built and optimized Exabeam SIEM queries and alert logic to improve true-positive detection rates through automated correlation.</p>
+                    <div class="project-metrics"><span class="metric">Detection Rate</span><span class="metric">Improved 45%</span></div>
+                    <div class="project-tags"><span>Exabeam</span><span>Automation</span><span>Alert Logic</span></div>
+                </div>
+
+                <!-- Red Team / Pentesting Projects -->
+                <div class="project-card" data-category="red-team">
+                    <h4>Web Application Security Testing</h4>
+                    <p>Performed web application security testing focused on OWASP Top 10 vulnerabilities and supported remediation.</p>
+                    <div class="project-metrics"><span class="metric">15+ Apps</span><span class="metric">Tested</span></div>
+                    <div class="project-tags"><span>Web Security</span><span>BurpSuite</span><span>OWASP</span></div>
+                </div>
+                <div class="project-card" data-category="red-team">
+                    <h4>OWASP Top 10 Assessments</h4>
+                    <p>Conducted comprehensive OWASP Top 10 assessments identifying vulnerabilities in web applications and APIs.</p>
+                    <div class="project-metrics"><span class="metric">10 Categories</span><span class="metric">Covered</span></div>
+                    <div class="project-tags"><span>OWASP Top 10</span><span>Penetration Testing</span><span>Vulnerability Assessment</span></div>
+                </div>
+                <div class="project-card" data-category="red-team">
+                    <h4>Exploitation and Vulnerability Validation</h4>
+                    <p>Executed adversary simulation scenarios using Caldera and Metasploit to test detection capabilities against real-world attack techniques.</p>
+                    <div class="project-metrics"><span class="metric">30+ Techniques</span><span class="metric">Validated</span></div>
+                    <div class="project-tags"><span>Metasploit</span><span>Caldera</span><span>Adversary Simulation</span><span>Purple Team</span></div>
+                </div>
+                <div class="project-card" data-category="red-team">
+                    <h4>Purple Team Operations</h4>
+                    <p>Conducted adversary simulation and control validation aligned with MITRE ATT&CK framework, documenting detection success rates and improvement recommendations.</p>
+                    <div class="project-metrics"><span class="metric">85% Detection</span><span class="metric">Rate</span></div>
+                    <div class="project-tags"><span>Purple Team</span><span>MITRE ATT&CK</span><span>Control Validation</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ThreatAnalyzer Investigator Section -->
-    <section id="threatscan" class="section section-highlight">
+    <!-- ThreatAnalyzer Section -->
+    <section id="threatanalyzer" class="section section-highlight">
         <div class="container">
-            <h2 class="section-title">ThreatAnalyzer</h2>
-            <p class="section-subtitle">Client-side threat intelligence tool combining VirusTotal, AbuseIPDB,URLScan and WHOIS APIs.
-                Independently engineered from scratch using a multi-stack architecture and integrated threat intelligence APIs to automate IOC enrichment, correlation, and risk scoring.</p>
+            <!-- Hero -->
+            <div class="threatscan-hero">
+                <h2 class="section-title">ThreatAnalyzer</h2>
+                <p class="section-subtitle">A web-based threat intelligence analysis platform built to support security investigations by aggregating and correlating data from multiple threat intelligence sources.</p>
+            </div>
+
+            <!-- Product Screenshot -->
             <div class="threatscan-preview">
                 <div class="preview-header">
                     <div class="preview-dots">
                         <span></span><span></span><span></span>
                     </div>
-                    <span class="preview-title">ThreatScan Investigator</span>
+                    <span class="preview-title">ThreatAnalyzer</span>
                 </div>
                 <div class="preview-content">
                     <div class="preview-mockup">
-                        <!-- IOC Input Demo -->
                         <div class="mockup-section">
                             <div class="mockup-label">Enter IOC</div>
                             <div class="mockup-input">https://suspicious-domain.com</div>
                         </div>
-                        
-                        <!-- Results Preview -->
                         <div class="mockup-results">
                             <div class="mockup-result-card">
                                 <div class="mockup-result-header">
@@ -493,77 +589,135 @@
                                         <span class="stat-num">1.2K</span>
                                         <span class="stat-text">Total Reports</span>
                                     </div>
+                                    <div class="mockup-stat">
+                                        <span class="stat-num verdict-malicious">Malicious</span>
+                                        <span class="stat-text">URLScan Verdict</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Feature Pills -->
-                        <div class="mockup-features">
-                            <span class="feature-pill"><i class="fas fa-bolt"></i> Auto-detect IOC type</span>
-                            <span class="feature-pill"><i class="fas fa-list"></i> Bulk scanning</span>
-                            <span class="feature-pill"><i class="fas fa-download"></i> CSV/TXT export</span>
-                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Features Grid -->
-            <div class="threatscan-features">
-                <div class="threatscan-feature">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Dual API Integration</h3>
-                    <p>VirusTotal (70+ vendors) + AbuseIPDB for comprehensive threat intelligence</p>
-                </div>
-                <div class="threatscan-feature">
-                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Smart Detection</h3>
-                    <p>Auto-detects URL, IP, Domain, or Hash input types automatically</p>
-                </div>
-                <div class="threatscan-feature">
-                    <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Combined Analysis</h3>
-                    <p>Unified risk assessment with cross-referenced threat data</p>
-                </div>
-                <div class="threatscan-feature">
-                    <div class="feature-icon"><i class="fas fa-bulk"></i></div>
-                    <h3>Bulk Processing</h3>
-                    <p>Scan multiple IOCs with real-time progress tracking</p>
-                </div>
-            </div>
-            
-            <!-- Supported IOC Types -->
-            <div class="ioc-types">
-                <h3><i class="fas fa-crosshairs"></i> Supported IOC Types</h3>
-                <div class="ioc-cards">
-                    <div class="ioc-card">
-                        <i class="fas fa-link"></i>
-                        <span>URL</span>
-                        <small>https://example.com/malware</small>
+
+            <!-- Key Capabilities -->
+            <div class="threatscan-capabilities">
+                <h3 class="section-subtitle">Key Capabilities</h3>
+                <div class="capability-grid">
+                    <div class="capability-card">
+                        <i class="fas fa-plug"></i>
+                        <h4>IOC Enrichment</h4>
+                        <p>Retrieves threat intelligence from VirusTotal, AbuseIPDB, URLScan, and WHOIS to enrich indicator investigations.</p>
                     </div>
-                    <div class="ioc-card">
-                        <i class="fas fa-network-wired"></i>
-                        <span>IP Address</span>
-                        <small>192.168.1.1</small>
+                    <div class="capability-card">
+                        <i class="fas fa-magic"></i>
+                        <h4>Automatic IOC Detection</h4>
+                        <p>Automatically identifies IOC types including IP addresses, domains, URLs, and file hashes.</p>
                     </div>
-                    <div class="ioc-card">
-                        <i class="fas fa-globe"></i>
-                        <span>Domain</span>
-                        <small>evil-domain.com</small>
+                    <div class="capability-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Bulk IOC Scanning</h4>
+                        <p>Allows analysts to analyze multiple indicators simultaneously to accelerate investigations.</p>
                     </div>
-                    <div class="ioc-card">
-                        <i class="fas fa-file-code"></i>
-                        <span>File Hash</span>
-                        <small>MD5, SHA1, SHA256</small>
+                    <div class="capability-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Threat Scoring</h4>
+                        <p>Aggregates intelligence results to generate risk scores and investigation summaries.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- CTA -->
-            <div class="threatscan-cta">
-                <a href="https://ksantos-tech.github.io/ThreatAnalyzer/" target="_blank" class="btn btn-primary btn-large">
-                    <i class="fas fa-external-link-alt"></i> Launch ThreatAnalyzer
-                </a>
-                <p>Open-source tool • No server required • Runs in browser</p>
+
+            <!-- Technology Stack -->
+            <div class="threatscan-tech-stack">
+                <h3 class="section-subtitle">Technology Stack</h3>
+                <div class="tech-row">
+                    <div class="tech-group">
+                        <h5>Frontend</h5>
+                        <p>HTML · CSS · JavaScript</p>
+                    </div>
+                    <div class="tech-group">
+                        <h5>Backend</h5>
+                        <p>Cloudflare Workers</p>
+                    </div>
+                    <div class="tech-group">
+                        <h5>Threat Intelligence</h5>
+                        <p>VirusTotal · AbuseIPDB · URLScan · WHOIS</p>
+                    </div>
+                    <div class="tech-group">
+                        <h5>DevOps</h5>
+                        <p>Git · GitHub · GitHub Actions CI/CD</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="threatscan-architecture">
+                <h3 class="section-subtitle">Architecture</h3>
+                <div class="arch-flow">
+                    <div class="arch-node">Browser</div>
+                    <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="arch-node">Cloudflare Workers</div>
+                    <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="arch-node">Threat Intelligence APIs<br><small>VirusTotal / AbuseIPDB / URLScan / WHOIS</small></div>
+                </div>
+            </div>
+
+            <!-- Security Considerations -->
+            <div class="threatscan-security">
+                <h3 class="section-subtitle">Security Considerations</h3>
+                <div class="security-cards">
+                    <div class="security-card">
+                        <i class="fas fa-key"></i>
+                        <h4>Secret Management</h4>
+                        <p>API keys securely stored using Cloudflare environment secrets</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Input Validation</h4>
+                        <p>Strict validation and sanitization for all IOC submissions</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Rate Limiting</h4>
+                        <p>Controlled request rates for external threat intelligence APIs</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend Isolation</h4>
+                        <p>Serverless architecture isolates credentials from client access</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Use Case -->
+            <div class="threatscan-usecase">
+                <h3 class="section-subtitle">Security Use Case</h3>
+                <div class="usecase-flow">
+                    <div class="usecase-step">
+                        <span class="step-number">1</span>
+                        <p>Analyst submits an IOC (IP, domain, URL, or file hash)</p>
+                    </div>
+                    <div class="usecase-step">
+                        <span class="step-number">2</span>
+                        <p>Platform queries multiple threat intelligence providers</p>
+                    </div>
+                    <div class="usecase-step">
+                        <span class="step-number">3</span>
+                        <p>Results are aggregated and correlated into unified report</p>
+                    </div>
+                    <div class="usecase-step">
+                        <span class="step-number">4</span>
+                        <p>Analyst determines if indicator is malicious, suspicious, or benign</p>
+                    </div>
+                </div>
+                <p class="usecase-summary">The platform accelerates incident response and improves threat hunting capabilities.</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="threatscan-buttons">
+                <a href="https://threatanalyzer.pages.dev/" target="_blank" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Launch ThreatAnalyzer</a>
+                <a href="https://github.com/ksantos-tech/ThreatAnalyzer" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> View GitHub</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-sitemap"></i> View Architecture</a>
             </div>
         </div>
     </section>
@@ -589,7 +743,7 @@
                     </a>
                     <a href="tel:+639474781542" class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>#</span>
+                        <span>+63 947 478 1542</span>
                     </a>
                 </div>
             </div>
@@ -607,7 +761,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-

@@ -97,6 +97,18 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Add active class styling for nav links
+const style = document.createElement('style');
+style.textContent = `
+    .nav-links a.active {
+        color: var(--primary-color) !important;
+    }
+    .nav-links a.active::after {
+        width: 100% !important;
+    }
+`;
+document.head.appendChild(style);
+
 // Add staggered animation to skill tags
 const skillTags = document.querySelectorAll('.skill-tag');
 skillTags.forEach((tag, index) => {
@@ -124,3 +136,34 @@ console.log(`
     'color: #e6f1ff;',
     'color: #8892b0;'
 );
+
+// Project Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (filterTabs.length > 0 && projectCards.length > 0) {
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                const filterValue = tab.getAttribute('data-filter');
+                
+                // Filter project cards
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || category === filterValue) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInScale 0.4s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+});
