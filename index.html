@@ -21,6 +21,157 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-size='20' fill='%2300d4aa' font-family='Arial'>KS</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── PhishGuard portfolio section styles ─────────────────── */
+        @keyframes pgNewPulse {
+            0%,100% { box-shadow: 0 0 0 0 rgba(248,81,73,.5); }
+            50%      { box-shadow: 0 0 0 4px rgba(248,81,73,0); }
+        }
+
+        /* Mockup body for PhishGuard */
+        .pg-mockup-body {
+            display: flex;
+            gap: 0;
+            min-height: 380px;
+        }
+
+        .pg-panel-left {
+            flex: 0 0 42%;
+            padding: 16px;
+            border-right: 1px solid rgba(188,140,255,.15);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pg-panel-right {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .pg-input-box {
+            min-height: 52px;
+            font-size: 10px;
+            color: #8b949e;
+        }
+
+        .pg-typed { font-size: 10px; color: #bc8cff; }
+
+        /* Check list in mockup */
+        .pg-checks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 4px 0;
+        }
+        .pg-check-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 10px;
+            color: #8b949e;
+        }
+        .pg-check-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .pg-check-dot.pass { background: #3fb950; box-shadow: 0 0 5px rgba(63,185,80,.5); }
+        .pg-check-dot.warn { background: #d29922; box-shadow: 0 0 5px rgba(210,153,34,.4); }
+        .pg-check-dot.fail { background: #f85149; box-shadow: 0 0 5px rgba(248,81,73,.5); }
+
+        /* Result cards grid */
+        .pg-result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .pg-result-card {
+            background: #0d1117;
+            border: 1px solid #21262d;
+            border-radius: 6px;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .pg-result-card.pg-fail { border-color: rgba(248,81,73,.3); background: rgba(248,81,73,.04); }
+        .pg-result-card.pg-warn { border-color: rgba(210,153,34,.3); background: rgba(210,153,34,.04); }
+        .pg-result-card.pg-ioc  { border-color: rgba(188,140,255,.3); background: rgba(188,140,255,.04); }
+
+        .pg-rc-top {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 9px;
+            color: #6e7681;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+        }
+        .pg-rc-top i { font-size: 9px; }
+
+        .pg-rc-val {
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.1;
+        }
+        .pg-rc-val.fail { color: #f85149; }
+        .pg-rc-val.warn { color: #d29922; }
+        .pg-rc-val.pass { color: #3fb950; }
+        .pg-rc-val.ioc  { color: #bc8cff; }
+
+        .pg-rc-sub { font-size: 9px; color: #6e7681; }
+
+        /* Coverage grid — 2-col card layout */
+        .pg-coverage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .pg-cov-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            background: rgba(0,0,0,.25);
+            border: 1px solid rgba(255,255,255,.06);
+            border-radius: 7px;
+            transition: border-color .2s;
+        }
+        .pg-cov-item:hover { border-color: rgba(188,140,255,.25); }
+        .pg-cov-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        .pg-cov-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+        .pg-cov-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #e6edf3;
+            line-height: 1.2;
+        }
+        .pg-cov-detail {
+            font-size: 10px;
+            color: #6e7681;
+            line-height: 1.4;
+        }
+
+        /* Section accent color override for PhishGuard */
+        .pg-section .ta-label {
+            color: #bc8cff;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,6 +184,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#github-projects">Projects</a></li>
                 <li><a href="#threatanalyzer">ThreatAnalyzer</a></li>
+                <li><a href="#phishguard">PhishGuard</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -576,6 +728,31 @@
                     </div>
                 </div>
 
+                <!-- PhishGuard — NEW -->
+                <div class="github-project-card featured" style="border-color: rgba(188,140,255,.35); background: linear-gradient(135deg, rgba(188,140,255,.04), rgba(56,139,253,.03));">
+                    <div class="gp-header">
+                        <div class="gp-icon" style="background: rgba(188,140,255,.15); color: #bc8cff;"><i class="fas fa-fish"></i></div>
+                        <div class="gp-meta">
+                            <span class="gp-lang"><span class="lang-dot" style="background:#bc8cff"></span>JavaScript</span>
+                            <span class="gp-badge featured-badge" style="background: rgba(188,140,255,.2); color: #bc8cff; border-color: rgba(188,140,255,.4);">Featured</span>
+                            <span class="gp-badge" style="background: rgba(248,81,73,.15); color: #f85149; border: 1px solid rgba(248,81,73,.35); margin-left: 4px; animation: pgNewPulse 2s ease-in-out infinite;">NEW</span>
+                        </div>
+                    </div>
+                    <h3 class="gp-title">PhishGuard</h3>
+                    <p class="gp-desc">Single-file phishing email analyzer that runs entirely in your browser. Paste a raw email or drop a .eml file — it checks SPF, DKIM, DMARC, HTML body threats, URL lookalikes, attachment risk, and evasion techniques. Extracts IOCs and sends them straight to ThreatAnalyzer for bulk enrichment. No install, no server, no data leaving your machine.</p>
+                    <div class="gp-tags">
+                        <span>Phishing Analysis</span>
+                        <span>SPF · DKIM · DMARC</span>
+                        <span>IOC Extraction</span>
+                        <span>Offline / Client-side</span>
+                        <span>Email Forensics</span>
+                    </div>
+                    <div class="gp-actions">
+                        <a href="https://github.com/ksantos-tech/PhishingAnalyzer" target="_blank" class="gp-btn gp-btn-gh"><i class="fab fa-github"></i> View Repo</a>
+                        <a href="https://ksantos-tech.github.io/PhishingAnalyzer/" target="_blank" class="gp-btn gp-btn-live" style="background: linear-gradient(135deg, rgba(188,140,255,.2), rgba(56,139,253,.15)); border-color: rgba(188,140,255,.45); color: #bc8cff;"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
                 <!-- SocTranslate -->
                 <div class="github-project-card">
                     <div class="gp-header">
@@ -859,8 +1036,301 @@
         </div>
     </section>
 
-    
-<!-- Contact Section -->
+    </section>
+
+<!-- PhishGuard Flagship Section -->
+<section id="phishguard" class="section ta-section pg-section">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="ta-header">
+            <div class="ta-label" style="color: #bc8cff; border-color: rgba(188,140,255,.3); background: rgba(188,140,255,.08);"><i class="fas fa-fish"></i> Open Source · New Tool</div>
+            <h2 class="ta-title" style="background: linear-gradient(135deg, #bc8cff, #58a6ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">PhishGuard</h2>
+            <p class="ta-problem">Phishing investigations are repetitive. Check the headers. Look up SPF. Open the HTML source. Paste the URLs into a scanner. By the time you're done, 15 minutes are gone and you've barely started the actual investigation.</p>
+            <p class="ta-solution">Paste a raw email or drop the .eml file. PhishGuard runs 60+ checks in your browser — auth failures, HTML harvesting tricks, URL lookalikes, suspicious attachments, evasion techniques — and hands you a scored breakdown with all IOCs ready to copy. Nothing leaves your machine.</p>
+            <div class="ta-hero-btns">
+                <a href="https://ksantos-tech.github.io/PhishingAnalyzer/" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed, #388bfd); border-color: rgba(188,140,255,.5);"><i class="fas fa-external-link-alt"></i> Open PhishGuard</a>
+                <a href="https://github.com/ksantos-tech/PhishingAnalyzer" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> View Source on GitHub</a>
+            </div>
+        </div>
+
+        <!-- App Mockup -->
+        <div class="ta-mockup-wrapper">
+            <div class="ta-mockup-chrome">
+                <div class="ta-chrome-dots"><span></span><span></span><span></span></div>
+                <div class="ta-chrome-bar">
+                    <i class="fas fa-lock ta-lock-icon"></i>
+                    <span class="ta-url">ksantos-tech.github.io/PhishingAnalyzer</span>
+                </div>
+            </div>
+            <div class="ta-mockup-body pg-mockup-body">
+                <!-- Left panel: input -->
+                <div class="ta-panel-left pg-panel-left">
+                    <div class="ta-app-header" style="background: linear-gradient(135deg, rgba(188,140,255,.12), rgba(56,139,253,.08)); border-color: rgba(188,140,255,.25);">
+                        <span class="ta-app-logo" style="color: #bc8cff;"><i class="fas fa-fish"></i> PhishGuard</span>
+                        <span class="ta-app-version" style="background: rgba(248,81,73,.15); color: #f85149; border-color: rgba(248,81,73,.3);">NEW</span>
+                    </div>
+                    <div class="ta-input-area">
+                        <label class="ta-input-label">Raw Email Source (.eml / paste)</label>
+                        <div class="ta-input-box pg-input-box">
+                            <span class="ta-ioc-typed pg-typed">Received: from mail.amis.net...</span>
+                            <span class="ta-cursor">|</span>
+                        </div>
+                        <div class="ta-type-row">
+                            <span class="ta-type-detected" style="color: #bc8cff; border-color: rgba(188,140,255,.3); background: rgba(188,140,255,.08);">
+                                <i class="fas fa-check-circle"></i> Drag &amp; drop .eml or paste raw headers + body
+                            </span>
+                        </div>
+                        <!-- Check list -->
+                        <div class="pg-checks-list">
+                            <div class="pg-check-item"><span class="pg-check-dot pass"></span><span>SPF · DKIM · DMARC · ARC</span></div>
+                            <div class="pg-check-item"><span class="pg-check-dot pass"></span><span>HTML body · Forms · Password fields</span></div>
+                            <div class="pg-check-item"><span class="pg-check-dot warn"></span><span>URL typosquatting · Homoglyphs · Punycode</span></div>
+                            <div class="pg-check-item"><span class="pg-check-dot warn"></span><span>Attachment risk · Double extensions</span></div>
+                            <div class="pg-check-item"><span class="pg-check-dot pass"></span><span>IOC extraction → ThreatAnalyzer bulk scan</span></div>
+                        </div>
+                        <button class="ta-scan-btn" style="background: linear-gradient(135deg, rgba(188,140,255,.25), rgba(56,139,253,.2)); border-color: rgba(188,140,255,.45); color: #bc8cff;">
+                            <i class="fas fa-search"></i> Analyze for Phishing
+                        </button>
+                    </div>
+                    <div class="ta-bulk-hint" style="color: #bc8cff; border-color: rgba(188,140,255,.2); background: rgba(188,140,255,.06);">
+                        <i class="fas fa-shield-alt"></i> 100% offline · No data leaves your browser
+                    </div>
+                </div>
+
+                <!-- Right panel: results -->
+                <div class="ta-panel-right pg-panel-right">
+                    <div class="ta-result-header" style="border-color: rgba(248,81,73,.25); background: rgba(248,81,73,.05);">
+                        <div class="ta-result-ioc">
+                            <span class="ta-result-ioc-val" style="font-size: 11px;">Re: DONATION FOR YOU · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfa8b9a6aba0e1a7aebabfbba2aea18faea2a6bce1a1aabb">[email&#160;protected]</a></span>
+                            <span class="ta-verdict-badge malicious">⚠ HIGH RISK</span>
+                        </div>
+                        <div class="ta-risk-bar-wrap">
+                            <div class="ta-risk-label">Threat Score</div>
+                            <div class="ta-risk-bar"><div class="ta-risk-fill" style="width:78%; background: linear-gradient(90deg, #f85149, #ff6b6b);"></div></div>
+                            <div class="ta-risk-val">78 / 100</div>
+                        </div>
+                    </div>
+                    <div class="pg-result-grid">
+                        <div class="pg-result-card pg-fail">
+                            <div class="pg-rc-top"><i class="fas fa-shield-alt"></i><span>SPF</span></div>
+                            <div class="pg-rc-val fail">FAIL</div>
+                            <div class="pg-rc-sub">Sender not authorized</div>
+                        </div>
+                        <div class="pg-result-card pg-warn">
+                            <div class="pg-rc-top"><i class="fas fa-signature"></i><span>DKIM</span></div>
+                            <div class="pg-rc-val warn">NONE</div>
+                            <div class="pg-rc-sub">No signature found</div>
+                        </div>
+                        <div class="pg-result-card pg-fail">
+                            <div class="pg-rc-top"><i class="fas fa-reply"></i><span>Reply-To</span></div>
+                            <div class="pg-rc-val fail">MISMATCH</div>
+                            <div class="pg-rc-sub">Different domain</div>
+                        </div>
+                        <div class="pg-result-card pg-fail">
+                            <div class="pg-rc-top"><i class="fas fa-link"></i><span>URLs</span></div>
+                            <div class="pg-rc-val fail">3 HIGH</div>
+                            <div class="pg-rc-sub">Typosquatting detected</div>
+                        </div>
+                        <div class="pg-result-card pg-warn">
+                            <div class="pg-rc-top"><i class="fas fa-code"></i><span>HTML Body</span></div>
+                            <div class="pg-rc-val warn">FORM</div>
+                            <div class="pg-rc-sub">Credential harvest</div>
+                        </div>
+                        <div class="pg-result-card pg-ioc">
+                            <div class="pg-rc-top"><i class="fas fa-crosshairs"></i><span>IOCs</span></div>
+                            <div class="pg-rc-val ioc">7</div>
+                            <div class="pg-rc-sub">Ready for bulk scan</div>
+                        </div>
+                    </div>
+                    <div class="ta-export-row" style="border-color: rgba(188,140,255,.15);">
+                        <span class="ta-export-btn" style="border-color: rgba(188,140,255,.3); color: #bc8cff;"><i class="fas fa-crosshairs"></i> Copy All IOCs</span>
+                        <span class="ta-export-btn" style="border-color: rgba(63,185,80,.3); color: #3fb950;"><i class="fas fa-search"></i> Send to ThreatAnalyzer</span>
+                        <span class="ta-export-btn"><i class="fas fa-download"></i> Export CSV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impact strip -->
+        <div class="ta-impact-row">
+            <div class="ta-impact-item">
+                <span class="ta-impact-num" style="color: #bc8cff;">60+</span>
+                <span class="ta-impact-label">Checks per Email</span>
+            </div>
+            <div class="ta-impact-divider"></div>
+            <div class="ta-impact-item">
+                <span class="ta-impact-num" style="color: #bc8cff;">0 bytes</span>
+                <span class="ta-impact-label">Sent Outside Your Browser</span>
+            </div>
+            <div class="ta-impact-divider"></div>
+            <div class="ta-impact-item">
+                <span class="ta-impact-num" style="color: #bc8cff;">3</span>
+                <span class="ta-impact-label">Attack Types Auto-Classified</span>
+            </div>
+            <div class="ta-impact-divider"></div>
+            <div class="ta-impact-item">
+                <span class="ta-impact-num" style="color: #bc8cff;">1 file</span>
+                <span class="ta-impact-label">No Install. No Server. No Keys.</span>
+            </div>
+        </div>
+
+        <!-- Why Built — full width now, arch panel below -->
+        <div class="ta-two-col">
+            <div class="ta-why-built">
+                <h3><i class="fas fa-lightbulb"></i> Why I Built This</h3>
+                <p>Phishing triage gets repetitive fast. Every report turns into the same routine — check headers, look up SPF, open the HTML, scan URLs. It takes time, but most of it isn't real analysis. It's just process.</p>
+                <p>PhishGuard puts all of that in one place. Drop in an email and get a full breakdown in seconds. Auth issues, suspicious links, spoofing signals, extracted IOCs — without jumping between tools.</p>
+                <p>I built it to cut down the busywork so analysts can focus on what actually matters: deciding if something is malicious and what to do next. If it saves even a few minutes per report, that adds up fast in a real queue.</p>
+                <div class="ta-design-decisions">
+                    <div class="ta-decision">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Offline by design</strong> — analysts deal with sensitive emails. Nothing should phone home.</span>
+                    </div>
+                    <div class="ta-decision">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Levenshtein + homoglyph checks</strong> — catches pаypal.com vs paypal.com, not just exact matches</span>
+                    </div>
+                    <div class="ta-decision">
+                        <i class="fas fa-check"></i>
+                        <span><strong>ThreatAnalyzer handoff</strong> — IOCs copy to clipboard and go straight into bulk scan. No re-entry.</span>
+                    </div>
+                    <div class="ta-decision">
+                        <i class="fas fa-check"></i>
+                        <span><strong>Scored by category</strong> — auth, content, and infrastructure scored separately so you know where the risk actually is</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ta-arch-panel" style="display:flex; flex-direction:column; justify-content:center; gap:12px;">
+                <h3 style="margin-bottom:4px;"><i class="fas fa-quote-left" style="color:#bc8cff; opacity:.6; font-size:1rem; margin-right:6px;"></i>Built from the chair</h3>
+                <blockquote style="border-left: 3px solid rgba(188,140,255,.4); padding-left: 14px; margin: 0; color: #8b949e; font-size: 12px; line-height: 1.8; font-style: italic;">
+                    "Security tools should get out of the analyst's way — not add more steps. The best tool is the one you barely notice because it just works."
+                </blockquote>
+                <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display:flex; align-items:center; gap:10px; font-size:11px; color:#8b949e;">
+                        <span style="width:32px; height:32px; border-radius:8px; background:rgba(188,140,255,.12); border:1px solid rgba(188,140,255,.25); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-heart" style="color:#bc8cff; font-size:12px;"></i></span>
+                        <span>Built for the love of security — not as a resume item</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; font-size:11px; color:#8b949e;">
+                        <span style="width:32px; height:32px; border-radius:8px; background:rgba(63,185,80,.1); border:1px solid rgba(63,185,80,.2); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-user-clock" style="color:#3fb950; font-size:12px;"></i></span>
+                        <span>Cuts 10–15 min of busywork per phishing report</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; font-size:11px; color:#8b949e;">
+                        <span style="width:32px; height:32px; border-radius:8px; background:rgba(56,139,253,.1); border:1px solid rgba(56,139,253,.2); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-crosshairs" style="color:#58a6ff; font-size:12px;"></i></span>
+                        <span>Keeps analyst focus on actionable decisions, not data entry</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px; font-size:11px; color:#8b949e;">
+                        <span style="width:32px; height:32px; border-radius:8px; background:rgba(210,153,34,.1); border:1px solid rgba(210,153,34,.2); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i class="fas fa-link" style="color:#d29922; font-size:12px;"></i></span>
+                        <span>Pairs with ThreatAnalyzer — same philosophy, different problem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What It Checks — full width 2-col card grid -->
+        <div style="margin-top: 32px;">
+            <h3 style="font-size: 16px; font-weight: 700; color: #e6edf3; margin-bottom: 16px; display:flex; align-items:center; gap:8px;">
+                <i class="fas fa-sitemap" style="color:#bc8cff;"></i> What It Checks
+            </h3>
+            <div class="pg-coverage-grid">
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(188,140,255,.12); color:#bc8cff;"><i class="fas fa-shield-alt"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">Authentication</span>
+                        <span class="pg-cov-detail">SPF, DKIM, DMARC, ARC — parsed from headers, alignment verified independently</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(248,81,73,.1); color:#f85149;"><i class="fas fa-code"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">HTML Body</span>
+                        <span class="pg-cov-detail">&lt;form&gt; tags, password inputs, hidden elements, base64 blobs, obfuscated JS</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(56,139,253,.1); color:#58a6ff;"><i class="fas fa-link"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">URLs</span>
+                        <span class="pg-cov-detail">Typosquatting (Levenshtein), homoglyphs, punycode, suspicious TLDs, credential params</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(210,153,34,.1); color:#d29922;"><i class="fas fa-paperclip"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">Attachments</span>
+                        <span class="pg-cov-detail">Double extensions, executables, macro-enabled Office files, archives</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(63,185,80,.1); color:#3fb950;"><i class="fas fa-user-secret"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">Identity &amp; Spoofing</span>
+                        <span class="pg-cov-detail">Brand impersonation, Reply-To mismatch, fake RE:/FW: thread chains, subdomain tricks</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(248,81,73,.1); color:#f85149;"><i class="fas fa-eye-slash"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">Evasion Techniques</span>
+                        <span class="pg-cov-detail">Zero-width characters, Unicode lookalikes, spaced-out keywords (v e r i f y)</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(188,140,255,.12); color:#bc8cff;"><i class="fas fa-crosshairs"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">IOC Extraction</span>
+                        <span class="pg-cov-detail">IPs, domains, emails, URLs — deduped, copy all or export TXT/CSV</span>
+                    </div>
+                </div>
+                <div class="pg-cov-item">
+                    <div class="pg-cov-icon" style="background:rgba(63,185,80,.1); color:#3fb950;"><i class="fas fa-search"></i></div>
+                    <div class="pg-cov-text">
+                        <span class="pg-cov-label">ThreatAnalyzer Handoff</span>
+                        <span class="pg-cov-detail">One click — IOCs go straight into bulk scan, no manual re-entry</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ta-stack-pills" style="margin-top: 14px;">
+                <span>JavaScript</span>
+                <span>Client-side only</span>
+                <span>Email Forensics</span>
+                <span>IOC Extraction</span>
+                <span>MIME Parsing</span>
+            </div>
+        </div>
+
+        <!-- Features strip -->
+        <div class="ta-features-strip">
+            <div class="ta-feature">
+                <i class="fas fa-file-upload" style="color:#bc8cff"></i>
+                <div><strong>Drag &amp; Drop .EML</strong><span>Load any raw email file directly. Supports .eml, .txt, .msg — no copy-paste gymnastics.</span></div>
+            </div>
+            <div class="ta-feature">
+                <i class="fas fa-layer-group" style="color:#bc8cff"></i>
+                <div><strong>60+ Checks, Three Score Categories</strong><span>Authentication, content, and infrastructure each scored independently so you know where the risk sits.</span></div>
+            </div>
+            <div class="ta-feature">
+                <i class="fas fa-crosshairs" style="color:#bc8cff"></i>
+                <div><strong>IOC Extraction</strong><span>Pulls IPs, domains, emails, and URLs. Deduped. Copy all in one click or export as TXT/CSV.</span></div>
+            </div>
+            <div class="ta-feature">
+                <i class="fas fa-plug" style="color:#3fb950"></i>
+                <div><strong>Sends IOCs to ThreatAnalyzer</strong><span>One click copies IOCs to clipboard and opens ThreatAnalyzer's bulk scan tab. No re-entry.</span></div>
+            </div>
+            <div class="ta-feature">
+                <i class="fas fa-lock" style="color:#3fb950"></i>
+                <div><strong>Offline. No APIs. No Tracking.</strong><span>Single HTML file. Open it, analyze the email, close it. Nothing leaves your machine.</span></div>
+            </div>
+            <div class="ta-feature">
+                <i class="fas fa-tags" style="color:#bc8cff"></i>
+                <div><strong>Attack Classification</strong><span>Tells you if it's BEC, Credential Phishing, or Malware Delivery — not just "suspicious."</span></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section section-dark">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -904,13 +1374,11 @@
                     <a href="#skills">Stack</a>
                     <a href="#github-projects">Projects</a>
                     <a href="#threatanalyzer">ThreatAnalyzer</a>
+                    <a href="#phishguard">PhishGuard</a>
                     <a href="#certifications">Certifications</a>
                     <a href="#contact">Contact</a>
                 </nav>
                 <div class="footer-socials">
                     <a href="https://linkedin.com/in/ksantos-tech" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ksantos-tech" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="/cdn-cgi/l/email-protection#8ae1e3e7f8efe4e9e2b8b9caede7ebe3e6a4e9e5e7" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div
+                    <a href="/cdn-cgi/l/email-protection#8ae1e3e7f8efe4e9e2b8b9caede7ebe
