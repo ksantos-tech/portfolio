@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)" />
+  <!-- Gradient border -->
+  <rect x="1" y="1" width="30" height="30" rx="6" fill="none" stroke="url(#border)" stroke-width="1.5" />
+  <!-- KS text -->
+  <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="13" fill="#00d4aa" text-anchor="middle" letter-spacing="-0.5">KS</text>
+</svg>
